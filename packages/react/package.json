@@ -1,6 +1,8 @@
 {
   "name": "@korphere/oasis-react",
   "version": "0.0.1",
+  "license": "MIT",
+  "description": "A library to detect user's OS and provide optimal download links for software distribution for React",
   "publishConfig": {
     "access": "public"
   },
