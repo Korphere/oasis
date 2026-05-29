@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Oasis - Vanilla JS Sample</title>
+  <style>
+    .download-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #0070f3;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#" class="js-oasis-btn download-button">
+    Downloading...
+  </a>
+
+  <script type="module">
+    import { autoLink } from 'https://esm.sh/@korphere/oasis-core';
+    // ^ If it's npm environment: import { autoLink } from '@korphere/oasis-core';
+
+    /*
+       Automatically set the download link based on the user's platform.
+       the key of the second argument is the platform name, and the value is the download URL for that platform.
+      - windows: Windows OS
+      - macos: macOS
+      - linux: Linux OS
+      - fallback: If the platform cannot be detected, this URL will be used as a fallback
+     */
+    autoLink('.js-oasis-btn', {
+      windows: 'https://example.com/downloads/oasis-setup.exe',
+      macos: 'https://example.com/downloads/oasis-setup.dmg',
+      linux: 'https://example.com/downloads/oasis-setup.tar.gz',
+      fallback: 'https://example.com/downloads/all-platforms'
+    }, { 
+      updateText: true
+    });
+  </script>
+</body>
+</html>

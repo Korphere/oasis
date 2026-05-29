@@ -1,0 +1,19 @@
+{
+  "name": "oasis-monorepo",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "build": "pnpm --filter \"./packages/*\" build",
+    "dev": "pnpm --filter \"./packages/*\" dev",
+    "clean": "pnpm --filter \"./packages/*\" exec rm -rf dist .turbo node_modules"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.29",
+    "react": "^19.2.6",
+    "tsdown": "^0.5.2",
+    "typescript": "^5.4.5"
+  }
+}
